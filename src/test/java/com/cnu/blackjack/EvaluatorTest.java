@@ -19,9 +19,9 @@ public class EvaluatorTest {
     public void 게임초기화시_모든플레이어는_2장의카드를_받는다() {
         // Evaluator 생성자 실행시 카드 2개가 가는지 확인하기 위한것
 
-        game.addPlayer("cnu1조", 200);
+        game.addPlayer("cnu_1", 200);
         Evaluator evaluator = new Evaluator(game.getPlayerList());
-        player = game.getPlayerList().get("cnu1조");
+        player = game.getPlayerList().get("cnu_1");
         assertThat(player.getCard().size(), is(2));
 
 
@@ -31,8 +31,8 @@ public class EvaluatorTest {
     @Test
     public void 각_플레이어는_16이하면_히트한다() {
 
-        game.addPlayer("cnu1조", 200);
-        game.addPlayer("cnu2조", 400);
+        game.addPlayer("cnu_1", 200);
+        game.addPlayer("cnu_2", 400);
 
         Evaluator evaluator = new Evaluator(game.getPlayerList());
 
